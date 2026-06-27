@@ -30,6 +30,27 @@ public class ThreeSum {
         return result;
 
     }
+
+    public static Set<List<Integer>> betterApproach(int[] nums){
+        for (int i = 0; i < nums.length; i++) {
+
+            Set<Integer> seen = new HashSet<>();
+        
+            for (int j = i + 1; j < nums.length; j++) {
+        
+                // Find third
+                int third = -(nums[i]+nums[j]);
+        
+                // Check in seen
+
+                if(seen.contains(third)){
+                   System.out.print("Triplet Found");
+                }
+                seen.add(nums[j]);
+        
+            }
+        }
+    }
     public static void main(String[] args) {
         int nums[] = {-1,0,1,2,-1,-4};
         bruteForce(nums);
